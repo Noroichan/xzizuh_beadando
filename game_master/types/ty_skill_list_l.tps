@@ -1,0 +1,2 @@
+CREATE OR REPLACE TYPE ty_skill_list_l IS TABLE OF VARCHAR2(40)
+/
