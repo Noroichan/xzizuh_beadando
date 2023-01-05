@@ -1,0 +1,22 @@
+CREATE TABLE characters_h(
+       character_id NUMBER,
+       character_nev VARCHAR2(40 CHAR),
+       character_race_id NUMBER,
+       character_cast_id NUMBER,
+       character_religion_id NUMBER,
+       character_health NUMBER,
+       character_evasion NUMBER,
+       character_mana NUMBER,
+       character_speed NUMBER,
+       character_attack VARCHAR2(3 CHAR),
+       character_aim VARCHAR2(3 CHAR),
+       character_stealth VARCHAR2(3 CHAR),
+       character_luck VARCHAR2(3 CHAR),
+       id NUMBER PRIMARY KEY,
+       modosito_user VARCHAR2(250),
+       modositasi_ido TIMESTAMP(6),
+       keszito_user VARCHAR2(250),
+       keszitesi_ido TIMESTAMP(6),
+       dml_tipus CHAR(1),
+       row_version NUMBER
+);
