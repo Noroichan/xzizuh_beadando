@@ -1,0 +1,78 @@
+PROMPT Installing DB...
+
+-- Install tables
+@./tables/characters_table.sql
+@./tables/races_table.sql
+@./tables/casts_table.sql
+@./tables/religions_table.sql
+@./tables/skills_table.sql
+@./tables/effects_table.sql
+@./tables/skills_of_characters_table.sql
+
+-- Install alters for logging
+@./alters/for_histories.sql
+
+-- Install history tables
+@./tables/characters_h.sql
+@./tables/races_h.sql
+@./tables/casts_h.sql
+@./tables/religions_h.sql
+@./tables/skills_h.sql
+@./tables/effects_h.sql
+
+-- Install constraints
+@./alters/constraints.sql
+
+-- Install sequences
+@./sequences/sequences.sql
+
+-- Install triggers
+@./triggers/trg_characters_iu_b.trg
+@./triggers/trg_characters_logging.trg
+@./triggers/trg_races_iu_b.trg
+@./triggers/trg_races_logging.trg
+@./triggers/trg_casts_iu_b.trg
+@./triggers/trg_casts_logging.trg
+@./triggers/trg_religions_iu_b.trg
+@./triggers/trg_religions_logging.trg
+@./triggers/trg_skills_iu_b.trg
+@./triggers/trg_skills_logging.trg
+@./triggers/trg_skills_of_characters_i_b.trg
+@./triggers/trg_effects_iu_b.trg
+@./triggers/trg_effects_logging.trg
+
+-- Install views
+@./views/vw_characters_with_bonuses.sql
+@./views/vw_characters_readable.sql
+@./views/vw_skills_and_effects.sql
+@./views/vw_characters.sql
+@./views/vw_races.sql
+@./views/vw_casts.sql
+@./views/vw_religions.sql
+@./views/vw_effects.sql
+@./views/vw_skills.sql
+
+-- Install types
+@./types/ty_skill_list_l.tps
+@./types/ty_character_with_skills.typ
+
+-- Install packeges
+@./packages/pkg_exceptions.spc
+@./packages/pkg_assist.pck
+@./packages/pkg_races.pck
+@./packages/pkg_casts.pck
+@./packages/pkg_religions.pck
+@./packages/pkg_effects.pck
+@./packages/pkg_skills.pck
+@./packages/pkg_characters.pck
+
+-- Install data
+@./inserts/casts_inserts.sql
+@./inserts/races_inserts.sql
+@./inserts/religions_inserts.sql
+@./inserts/characters_inserts.sql
+@./inserts/effects_inserts.sql
+@./inserts/skills_inserts.sql
+@./inserts/skills_of_characters_inserts.sql
+
+PROMPT Done...
